@@ -26,5 +26,5 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: build project
       run: mvn test-compile -pl guava-test -am
-    - name: Test Flaky Test: testToStringWithNullValues
+    - name: Test Flaky Test testToStringWithNullValues
       run: mvn -pl guava-test edu.illinois:nondex-maven-plugin:1.1.2:nondex -Dtest=com.google.common.collect.ForwardingMapTest#testToStringWithNullValues -DnondexRuns=10
